@@ -23,7 +23,7 @@ function Header() {
         onClick={() => handleSetActivePage('home')}
         style={{ color: activePage === 'home' ? 'white' : 'white' }}
       >
-        GlobeTrak
+        Find My Parcel
       </Link>
       <nav>
         <Link
