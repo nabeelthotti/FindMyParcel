@@ -1,0 +1,24 @@
+/* API.css */
+.api-container {
+    margin-top: 50px;
+    background-color: #16a085; /* Teal background */
+    color: #fff;
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.api-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.api-content {
+    font-size: 1.2rem;
+}
+
+.api-link {
+    color: #f39c12; /* Orange for contrast */
+    text-decoration: none;
+}

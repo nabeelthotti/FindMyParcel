@@ -1,0 +1,38 @@
+/* Header.css */
+
+.header {
+    background-color: #4BC0C8; /* Teal color */
+    color: white;
+    width: 100%;
+    position: fixed; /* Makes header stick to the top */
+    top: 0;
+    left: 0;
+    overflow: visible; /* Ensure that dropdowns can overflow the header */
+    z-index: 1000; /* Keeps it above other content */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out; /* Smooth background transition */
+}
+
+.header-link, .header-select {
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out; /* Smooth transform for scaling */
+    background-color: transparent; /* Ensures no background is applied to links */
+    border: none; /* Removes border */
+    outline: none; /* Removes focus outline */
+}
+
+.header-link:hover, .header-select:hover {
+    text-decoration: underline;
+    transform: scale(1.1); /* Scale up on hover for a dynamic effect */
+}
+
+.header-select {
+    padding: 5px 10px; /* Adjust padding as needed */
+    cursor: pointer; /* Shows a pointer cursor on hover */
+}

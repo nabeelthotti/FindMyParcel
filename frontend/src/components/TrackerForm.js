@@ -23,7 +23,7 @@ function TrackerForm() {
             <label>
                 Carrier:
                 <select value={carrier} onChange={e => setCarrier(e.target.value)}>
-                    <option value="">Select a Carrier</option>
+                    <option value="">Select an Option</option>
                     <option value="ups">UPS</option>
                     <option value="usps">USPS</option>
                     <option value="fedex">FedEx</option>

@@ -1,0 +1,22 @@
+/* About.css */
+.about-container {
+    margin-top: 50px;  /* Adjust if header height changes */
+    background-color: #8e44ad;  /* Purple background */
+    color: #ecf0f1;  /* Light grey text */
+    height: calc(100vh - 60px);  /* Adjusted to fill the viewport height minus the header */
+    overflow: hidden;  /* Prevent scrolling */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;  /* Ensure the text is centered if the screen width is narrow */
+}
