@@ -1,11 +1,10 @@
-/* About.css */
 .about-container {
     display: flex;
     align-items: center;
     justify-content: center;
     height: calc(100vh - 60px);
     color: #fff;
-    background-color: #34495e; /* Adjust the background color as needed */
+    background-color: #34495e; 
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -15,15 +14,15 @@
     max-width: 40%;
     padding: 20px;
     display: flex;
-    align-items: center; /* Center the image vertically within the .about-image div */
-    justify-content: center; /* Center the image horizontally within the .about-image div */
+    align-items: center; 
+    justify-content: center;
 }
 
 .about-image img {
-    width: 70%; /* Adjust width to 100% of its parent container */
-    max-height: 70%; /* Set max height to prevent the image from being too tall */
-    object-fit: cover; /* This will cover the area of the img tag, cropping the image if necessary */
-    border-radius: 10px; /* Optional: rounded corners for the image */
+    width: 70%;
+    max-height: 70%;
+    object-fit: cover; 
+    border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -31,7 +30,7 @@
     flex: 2;
     max-width: 60%;
     padding: 20px;
-    text-align: left; /* Align the text to the left side */
+    text-align: left; 
 }
 
 .about-title {

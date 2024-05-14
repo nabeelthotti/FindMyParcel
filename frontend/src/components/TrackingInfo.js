@@ -4,7 +4,6 @@ import { useTracking } from '../context/TrackingContext';
 function TrackingInfo() {
     const { trackingInfo } = useTracking();
 
-    // Function to derive the last known location from the checkpoints array
     const getLastLocation = () => {
         if (!trackingInfo || !trackingInfo.checkpoints || trackingInfo.checkpoints.length === 0) {
             return "Not available";
@@ -13,7 +12,6 @@ function TrackingInfo() {
         return `${lastCheckpoint.location} (${lastCheckpoint.city}, ${lastCheckpoint.state})`;
     }
 
-    // Function to format the expected delivery date
     const getFormattedDate = (dateString) => {
         return new Date(dateString).toLocaleDateString("en-US", {
             weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'

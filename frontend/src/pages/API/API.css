@@ -1,7 +1,6 @@
-/* API.css */
 .api-container {
     margin-top: 50px;
-    background-color: #16a085; /* Teal background */
+    background-color: #16a085; 
     color: #fff;
     min-height: calc(100vh - 60px);
     display: flex;
@@ -19,6 +18,6 @@
 }
 
 .api-link {
-    color: #f39c12; /* Orange for contrast */
+    color: #f39c12; 
     text-decoration: none;
 }
