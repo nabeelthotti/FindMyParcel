@@ -1,13 +1,37 @@
 /* About.css */
 .about-container {
-    margin-top: 50px;  /* Adjust if header height changes */
-    background-color: #8e44ad;  /* Purple background */
-    color: #ecf0f1;  /* Light grey text */
-    height: calc(100vh - 60px);  /* Adjusted to fill the viewport height minus the header */
-    overflow: hidden;  /* Prevent scrolling */
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: calc(100vh - 60px);
+    color: #fff;
+    background-color: #34495e; /* Adjust the background color as needed */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about-image {
+    flex: 1;
+    max-width: 40%;
+    padding: 20px;
+    display: flex;
+    align-items: center; /* Center the image vertically within the .about-image div */
+    justify-content: center; /* Center the image horizontally within the .about-image div */
+}
+
+.about-image img {
+    width: 70%; /* Adjust width to 100% of its parent container */
+    max-height: 70%; /* Set max height to prevent the image from being too tall */
+    object-fit: cover; /* This will cover the area of the img tag, cropping the image if necessary */
+    border-radius: 10px; /* Optional: rounded corners for the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+    flex: 2;
+    max-width: 60%;
+    padding: 20px;
+    text-align: left; /* Align the text to the left side */
 }
 
 .about-title {
@@ -17,6 +41,5 @@
 
 .about-content {
     font-size: 1.2rem;
-    line-height: 1.6;
-    text-align: center;  /* Ensure the text is centered if the screen width is narrow */
+    line-height: 1.8;
 }

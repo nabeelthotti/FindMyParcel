@@ -4,15 +4,31 @@ import { useTracking } from '../context/TrackingContext';
 function TrackingInfo() {
     const { trackingInfo } = useTracking();
 
+    // Function to derive the last known location from the checkpoints array
+    const getLastLocation = () => {
+        if (!trackingInfo || !trackingInfo.checkpoints || trackingInfo.checkpoints.length === 0) {
+            return "Not available";
+        }
+        const lastCheckpoint = trackingInfo.checkpoints[trackingInfo.checkpoints.length - 1];
+        return `${lastCheckpoint.location} (${lastCheckpoint.city}, ${lastCheckpoint.state})`;
+    }
+
+    // Function to format the expected delivery date
+    const getFormattedDate = (dateString) => {
+        return new Date(dateString).toLocaleDateString("en-US", {
+            weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+        });
+    }
+
     return (
         <div className="result">
             {trackingInfo ? (
                 <div>
-                    <p>Carrier: {trackingInfo.carrier}</p>
-                    <p>Tracking Number: {trackingInfo.trackingNumber}</p>
-                    <p>Status: {trackingInfo.status}</p>
-                    <p>Last Location: {trackingInfo.lastLocation}</p>
-                    <p>Estimated Delivery: {trackingInfo.estimatedDelivery}</p>
+                    <p>Carrier: {trackingInfo.slug || "Not available"}</p>
+                    <p>Tracking Number: {trackingInfo.tracking_number || "Not available"}</p>
+                    <p>Status: {trackingInfo.tag || "Not available"}</p>
+                    <p>Last Location: {getLastLocation()}</p>
+                    <p>Estimated Delivery: {trackingInfo.expected_delivery ? getFormattedDate(trackingInfo.expected_delivery) : "Not available"}</p>
                 </div>
             ) : (
                 <p>No tracking information available.</p>

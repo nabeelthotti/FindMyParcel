@@ -1,12 +1,21 @@
-const trackingData = {
-    ups: { status: 'In Transit', lastLocation: 'New York, NY', estimatedDelivery: '2023-05-18' },
-    usps: { status: 'Delivered', lastLocation: 'Boston, MA', estimatedDelivery: '2023-05-10' },
-    fedex: { status: 'Delayed', lastLocation: 'Chicago, IL', estimatedDelivery: '2023-05-20' }
-  };
+const axios = require('axios');
+require ('dotenv').config()  
+
+const getTrackingInfo = async (carrier, trackingNumber) => {
+  const url = `https://api.aftership.com/v4/trackings/${carrier}/${trackingNumber}`;
   
-  function getTrackingInfo(carrier, trackingNumber) {
-    return trackingData[carrier.toLowerCase()] || null;
+  try {
+    const response = await axios.get(url, {
+      headers: {
+        'aftership-api-key': process.env.APIKEY,
+        'Content-Type': 'application/json'
+      }
+    });
+    return response.data.data.tracking;  // Modify according to the actual response structure
+  } catch (error) {
+    console.error('Failed to retrieve tracking data:', error);
+    return null;
   }
-  
-  module.exports = { getTrackingInfo };
-  
+};
+
+module.exports = { getTrackingInfo };

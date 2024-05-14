@@ -1,7 +1,8 @@
 import React from 'react';
-import './Home.css'; // Ensure the CSS is properly linked
+import './Home.css';
 import TrackerForm from '../../components/TrackerForm';
 import TrackingInfo from '../../components/TrackingInfo';
+
 
 function Home() {
     return (
