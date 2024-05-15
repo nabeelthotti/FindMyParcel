@@ -4,10 +4,10 @@
     justify-content: center;
     color: #fff;
     background-color: #34495e;
-    min-height: 100vh; /* Ensures that the container fills at least the whole vertical height */
+    min-height: 100vh; 
     width: 100%;
     box-sizing: border-box;
-    flex-direction: row; /* Explicitly set the flex direction to row */
+    flex-direction: row; 
 }
 
 .about-image {
@@ -44,20 +44,20 @@
     line-height: 1.8;
 }
 
-/* Media queries for responsiveness */
+
 @media (max-width: 768px) {
     .about-container {
-        flex-direction: column; /* Change the flex direction to column for smaller screens */
-        height: auto; /* Adjust the height to be auto to accommodate a stacked layout */
-        padding: 20px; /* Add some padding for better spacing */
+        flex-direction: column; 
+        height: auto; 
+        padding: 20px;
     }
 
     .about-image,
     .about-text {
-        max-width: 100%; /* Allow each block to expand to full container width */
+        max-width: 100%; 
     }
 
     .about-image img {
-        width: 100%; /* Increase the image width to full to better fit its container */
+        width: 100%;
     }
 }
