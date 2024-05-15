@@ -1,4 +1,3 @@
-// Header.js
 import React, { useState } from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
@@ -21,16 +20,16 @@ function Header() {
         to="/"
         className={`header-link ${activePage === 'home' ? 'active' : ''}`}
         onClick={() => handleSetActivePage('home')}
-        style={{ color: activePage === 'home' ? 'white' : 'white' }}
+        style={{ color: activePage === 'home' ? 'white' : '#007BFF' }}
       >
-        GlobeTrak
+        Find My Parcel
       </Link>
       <nav>
         <Link
           to="/couriers"
           className={`header-link ${activePage === 'couriers' ? 'active' : ''}`}
           onClick={() => handleSetActivePage('couriers')}
-          style={{ color: activePage === 'couriers' ? '#34495e' : '34495e' }}
+          style={{ color: activePage === 'couriers' ? 'white' : '#5884af' }}
         >
           Couriers
         </Link>
@@ -38,7 +37,7 @@ function Header() {
           to="/api"
           className={`header-link ${activePage === 'api' ? 'active' : ''}`}
           onClick={() => handleSetActivePage('api')}
-          style={{ color: activePage === 'api' ? '#16a085' : '#16a085' }}
+          style={{ color: activePage === 'api' ? 'white' : '#16a085' }}
         >
           API
         </Link>
@@ -46,7 +45,7 @@ function Header() {
           to="/about"
           className={`header-link ${activePage === 'about' ? 'active' : ''}`}
           onClick={() => handleSetActivePage('about')}
-          style={{ color: activePage === 'about' ? '#8e44ad' : '#8e44ad' }}
+          style={{ color: activePage === 'about' ? 'white' : '#8e44ad' }}
         >
           About
         </Link>
@@ -55,7 +54,7 @@ function Header() {
           onChange={handleLanguageChange}
           style={{
             padding: '2px',
-            color: 'blue',
+            color: '#af354c',
             fontFamily: 'inherit',
             fontWeight: 'bold',
             fontSize: '15px',

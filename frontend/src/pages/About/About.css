@@ -1,13 +1,37 @@
-/* About.css */
 .about-container {
-    margin-top: 50px;  /* Adjust if header height changes */
-    background-color: #8e44ad;  /* Purple background */
-    color: #ecf0f1;  /* Light grey text */
-    height: calc(100vh - 60px);  /* Adjusted to fill the viewport height minus the header */
-    overflow: hidden;  /* Prevent scrolling */
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #34495e;
+    min-height: 100vh; 
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: row; 
+}
+
+.about-image {
+    flex: 1;
+    max-width: 40%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 70%;
+    max-height: 70%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+    flex: 2;
+    max-width: 60%;
+    padding: 20px;
+    text-align: left;
 }
 
 .about-title {
@@ -17,6 +41,23 @@
 
 .about-content {
     font-size: 1.2rem;
-    line-height: 1.6;
-    text-align: center;  /* Ensure the text is centered if the screen width is narrow */
+    line-height: 1.8;
+}
+
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; 
+        height: auto; 
+        padding: 20px;
+    }
+
+    .about-image,
+    .about-text {
+        max-width: 100%; 
+    }
+
+    .about-image img {
+        width: 100%;
+    }
 }

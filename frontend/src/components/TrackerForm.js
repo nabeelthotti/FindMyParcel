@@ -8,15 +8,29 @@ function TrackerForm() {
 
     const handleTrack = async (e) => {
         e.preventDefault();
+        console.log("Attempting to track:", carrier, trackingNumber); 
         if (!carrier || !trackingNumber) {
             alert('Please enter all fields');
             return;
         }
-        fetch(`http://localhost:9999/api/tracking/${carrier}/${trackingNumber}`)
-            .then(response => response.json())
-            .then(data => setTrackingInfo(data))
-            .catch(error => console.error('Failed to fetch tracking data:', error));
+        fetch(`https://packagetrackerbackend.fly.dev/api/tracking/${carrier}/${trackingNumber}`)
+            .then(response => {
+                console.log("Received response", response); 
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error('Network response was not ok.');
+            })
+            .then(data => {
+                console.log("Tracking data:", data); 
+                setTrackingInfo(data);
+            })
+            .catch(error => {
+                console.error('Failed to fetch tracking data:', error);
+                alert('Failed to fetch tracking data.');
+            });
     };
+    
 
     return (
         <form onSubmit={handleTrack}>
@@ -24,9 +38,13 @@ function TrackerForm() {
                 Carrier:
                 <select value={carrier} onChange={e => setCarrier(e.target.value)}>
                     <option value="">Select an Option</option>
+                    <option value="amazon">Amazon</option>
+                    <option value="dhl-active-tracing">DHL</option>
+                    <option value="fedex">FedEx</option>
                     <option value="ups">UPS</option>
                     <option value="usps">USPS</option>
-                    <option value="fedex">FedEx</option>
+                    <option value="testing-courier">TEST COURIER</option>
+        
                 </select>
             </label>
             <label>

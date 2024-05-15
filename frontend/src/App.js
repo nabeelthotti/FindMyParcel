@@ -5,8 +5,8 @@ import Home from './pages/Home/Home';
 import Couriers from './pages/Couriers/Couriers';
 import API from './pages/API/API';
 import About from './pages/About/About';
+import NotFound from './pages/NotFound/NotFound'; 
 import { TrackingProvider } from './context/TrackingContext';
-
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
         <Route path="/couriers" element={<Couriers />} />
         <Route path="/api" element={<API />} />
         <Route path="/about" element={<About />} />
+        <Route path="*" element={<NotFound />} /> 
       </Routes>
     </TrackingProvider>
   );
