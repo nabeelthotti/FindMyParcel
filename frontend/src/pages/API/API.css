@@ -1,11 +1,13 @@
 .api-container {
-    margin-top: 50px;
     background-color: #16a085; 
-    color: #fff;
-    min-height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    min-height: 100vh; /* Ensure it covers at least the full height of the viewport */
+    width: 100%; /* Ensure it covers the full width of the viewport */
+    padding: 20px; /* Adjust padding as needed */
+    box-sizing: border-box; /* Includes padding in width/height calculations */
 }
 
 .api-title {

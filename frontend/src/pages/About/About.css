@@ -5,8 +5,13 @@
     height: calc(100vh - 60px);
     color: #fff;
     background-color: #34495e; 
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh; /* Ensure it covers at least the full height of the viewport */
+    width: 100%; /* Ensure it covers the full width of the viewport */
+    padding: 20px; /* Adjust padding as needed */
+    box-sizing: border-box; /* Includes padding in width/height calculations */
+
 }
 
 .about-image {

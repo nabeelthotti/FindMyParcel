@@ -21,6 +21,7 @@
     font-weight: bold;
     transition: transform 0.2s ease-in-out; 
     background-color: transparent; 
+    
     border: none; 
     outline: none; 
 }

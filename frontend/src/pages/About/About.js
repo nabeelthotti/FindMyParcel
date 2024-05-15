@@ -1,12 +1,12 @@
 import React from 'react';
 import './About.css';
+import nabeelPic from './nabeel.png'; // Ensure the import name matches the usage
 
 function About() {
   return (
     <div className="about-container">
       <div className="about-image">
-      <img src="/images/nabeel.jpg" alt="Nabeel Thotti" />
-
+        <img src={nabeelPic} alt="Nabeel Thotti" /> {/* Use the imported image variable here */}
       </div>
       <div className="about-text">
         <h1 className="about-title">About This Site</h1>
