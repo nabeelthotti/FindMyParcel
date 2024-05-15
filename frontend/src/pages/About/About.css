@@ -2,16 +2,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 60px);
     color: #fff;
-    background-color: #34495e; 
-    display: flex;
-    justify-content: center;
-    min-height: 100vh; /* Ensure it covers at least the full height of the viewport */
-    width: 100%; /* Ensure it covers the full width of the viewport */
-    padding: 20px; /* Adjust padding as needed */
-    box-sizing: border-box; /* Includes padding in width/height calculations */
-
+    background-color: #34495e;
+    min-height: 100vh; /* Ensures that the container fills at least the whole vertical height */
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: row; /* Explicitly set the flex direction to row */
 }
 
 .about-image {
@@ -19,15 +15,15 @@
     max-width: 40%;
     padding: 20px;
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
 }
 
 .about-image img {
     width: 70%;
     max-height: 70%;
-    object-fit: cover; 
-    border-radius: 10px; 
+    object-fit: cover;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -35,7 +31,7 @@
     flex: 2;
     max-width: 60%;
     padding: 20px;
-    text-align: left; 
+    text-align: left;
 }
 
 .about-title {
@@ -46,4 +42,22 @@
 .about-content {
     font-size: 1.2rem;
     line-height: 1.8;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Change the flex direction to column for smaller screens */
+        height: auto; /* Adjust the height to be auto to accommodate a stacked layout */
+        padding: 20px; /* Add some padding for better spacing */
+    }
+
+    .about-image,
+    .about-text {
+        max-width: 100%; /* Allow each block to expand to full container width */
+    }
+
+    .about-image img {
+        width: 100%; /* Increase the image width to full to better fit its container */
+    }
 }
