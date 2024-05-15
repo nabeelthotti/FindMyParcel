@@ -29,6 +29,3 @@ This site is powered by the AfterShip API, which provides detailed tracking info
 
 Contributions to enhance FindMyParcel are always welcome. Whether it's improving the interface, adding new features, or enhancing existing functionality, please feel free to fork the repository and submit a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
